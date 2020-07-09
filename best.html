@@ -1,0 +1,309 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	<meta http-equiv="x-ua-compatible" content="ie=7" />
+    
+    
+	<link rel="alternate" media="only screen and(max-width: 640px)" href="http://m.news.4399.com/gonglue/kpct/kapai/" >
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <script type="text/javascript" src="http://newsimg.5054399.com/js/checkMobile.js"></script>
+    <script>var __mobileurl='http://m.news.4399.com/gonglue/kpct/kapai/';check_mobile(__mobileurl,__mobileurl,'')</script>
+	<link href="http://newsimg.5054399.com/css/shouyou/shouji_new_head_style_e1.css" rel="stylesheet" type="text/css" />
+	<link href="http://newsimg.5054399.com/sjyx/v6/css/style_e8.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="http://hdimg.5054399.com/js/jquery-1.6.1.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<script src="http://newsimg.5054399.com/js/jq/jquery_tuc_comm_func_v.2.0.0.js"></script>
+		<script type="text/javascript" src="http://newsimg.5054399.com/sjyx/v6/js/dqer.js"></script>
+	<base target="_blank"></base>
+	<style>
+
+	.col-lg-2{
+		text-align: center;
+		display: inline-block;
+	}
+		
+	#queue{
+		pointer-events: none;
+	}
+
+	.focus{
+		background-color: brown;
+	}
+	</style>
+
+	<script>
+		const que = [];
+
+		function appendDiv(url, name) {
+			var elem = document.createElement("img");
+			elem.src = url;
+			var iDiv = document.createElement('div');
+			iDiv.id = name;
+			iDiv.className = 'col-lg-2';
+			var a = document.createElement('a');
+			a.href = "javascript:appendDiv('" + String(url) + "\',\'" + String(name) + "\' )";
+			a.appendChild(elem);
+			iDiv.appendChild(a);
+
+
+			if(que.length > 0){
+				var front = document.getElementById(que[0].id);
+				front.classList.remove('focus');
+			}
+			if(que.length < 4){
+
+				
+			}
+			else { 
+				var pic = document.getElementById(name);
+				if(pic == null){
+
+
+
+					var h = document.getElementById('hand');
+					h.append(que.shift());
+					
+				}
+				else{ // size == 4
+					// alert('seen');
+					
+					pic.remove();
+
+
+					var h = document.getElementById('hand');
+					h.append(que.shift());
+
+				}
+
+				
+			}
+
+
+
+			var s = document.getElementById('queue');
+			s.appendChild(iDiv);
+			que.push(iDiv);
+
+			var front = document.getElementById(que[0].id);
+			// front.className = 'focus';
+			front.classList.add('focus');
+
+
+
+
+		}
+
+
+		
+
+	</script>
+</head>
+<body>
+	<div class="topbar">
+	<div class="topwbar">
+		
+		
+		
+	</div>
+</div>
+	
+	<div id = "hand" class="col-lg-12" style="background-color: aqua; border-width: 3px;">
+		<div class="col-lg-2" style="text-align: center;">Hand Card</div>
+	</div>
+
+	<div id = "queue" class="col-lg-12" style="background-color:burlywood; border-width: 3px">
+		<div class="col-lg-2" style="text-align: center;">Queue</div>
+	</div>
+
+	<div class="main3">
+	    
+
+	    <div class="videolist conbd">
+	    			    	<div class="kpsel">
+		    				    		<dl class="cf">
+		    			<dt>卡牌类型</dt>
+		    			<dd rel_c_id=52>
+		    				<a class="on" rel="all" href="#">全部</a>
+		    						    					<a rel="0" href="#">部队</a>
+		    						    					<a rel="1" href="#">法术</a>
+		    						    					<a rel="2" href="#">建筑</a>
+		    						    			</dd>
+		    		</dl>
+		    				    		<dl class="cf">
+		    			<dt>稀有度</dt>
+		    			<dd rel_c_id=53>
+		    				<a class="on" rel="all" href="#">全部</a>
+		    						    					<a rel="0" href="#">普通</a>
+		    						    					<a rel="1" href="#">稀有</a>
+		    						    					<a rel="2" href="#">史诗</a>
+		    						    					<a rel="3" href="#">传奇</a>
+		    						    			</dd>
+		    		</dl>
+		    				    		<dl class="cf">
+		    			<dt>解锁区域</dt>
+		    			<dd rel_c_id=54>
+		    				<a class="on" rel="all" href="#">全部</a>
+		    						    					<a rel="0" href="#">新手训练营</a>
+		    						    					<a rel="1" href="#">1阶竞技场</a>
+		    						    					<a rel="2" href="#">2阶竞技场</a>
+		    						    					<a rel="3" href="#">3阶竞技场</a>
+		    						    					<a rel="4" href="#">4阶竞技场</a>
+		    						    					<a rel="5" href="#">5阶竞技场</a>
+		    						    					<a rel="6" href="#">6阶竞技场</a>
+		    						    					<a rel="7" href="#">7阶竞技场</a>
+		    						    					<a rel="8" href="#">8阶竞技场</a>
+		    						    					<a rel="9" href="#">9阶竞技场</a>
+		    						    					<a rel="10" href="#">10阶竞技场</a>
+		    						    			</dd>
+		    		</dl>
+		    				    	</div>
+	    				<ul class="listImg2" id="daquan_list">
+							<li rel="57292" rel_n="狂暴水人" style="display:none;"  rel52="" rel53="" rel54=""><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/userup/2005/121I5461217.jpg','121I5461217');"><img src="http://newsimg.5054399.com/uploads/userup/2005/121I5461217.jpg" alt="部落冲突：皇室战争狂暴水人">狂暴水人</a></li>
+							<li rel="57292" rel_n="烟花炮手" style="display:none;"  rel52="" rel53="" rel54=""><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/userup/2005/1215563D345.jpg','1215563D345');"><img src="http://newsimg.5054399.com/uploads/userup/2005/1215563D345.jpg" alt="部落冲突：皇室战争烟花炮手">烟花炮手</a></li>
+							<li rel="57292" rel_n="渔夫" style="display:none;"  rel52="" rel53="" rel54=""><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/userup/2001/061515422K7.jpg','061515422K7');"><img src="http://newsimg.5054399.com/uploads/userup/2001/061515422K7.jpg" alt="部落冲突：皇室战争渔夫">渔夫</a></li>
+							<li rel="57292" rel_n="攻城炸弹人" style="display:none;"  rel52="" rel53="" rel54=""><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/190129/343_1448055342.png','343_1448055342');"><img src="http://newsimg.5054399.com/uploads/soft/190129/343_1448055342.png" alt="部落冲突：皇室战争攻城炸弹人">攻城炸弹人</a></li>
+							<li rel="57292" rel_n="蛮羊骑士" style="display:none;"  rel52="" rel53="" rel54=""><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/181221/343_1640554871.png','343_1640554871');"><img src="http://newsimg.5054399.com/uploads/soft/181221/343_1640554871.png" alt="部落冲突：皇室战争蛮羊骑士">蛮羊骑士</a></li>
+							<li rel="57292" rel_n="雷电飞龙" style="display:none;"  rel52="" rel53="" rel54=""><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/181029/343_1412219151.png','343_1412219151');"><img src="http://newsimg.5054399.com/uploads/soft/181029/343_1412219151.png" alt="部落冲突：皇室战争雷电飞龙">雷电飞龙</a></li>
+							<li rel="57292" rel_n="哥布林巨人" style="display:none;"  rel52="" rel53="" rel54=""><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/180903/343_1719352981.png','343_1719352981');"><img src="http://newsimg.5054399.com/uploads/soft/180903/343_1719352981.png" alt="部落冲突：皇室战争哥布林巨人">哥布林巨人</a></li>
+							<li rel="57292" rel_n="皇家卫队" style="display:none;"  rel52="" rel53="" rel54=""><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/180719/343_1034036531.png','343_1034036531');"><img src="http://newsimg.5054399.com/uploads/soft/180719/343_1034036531.png" alt="部落冲突：皇室战争皇家卫队">皇家卫队</a></li>
+							<li rel="57292" rel_n="皇家野猪" style="display:none;"  rel52="" rel53="" rel54=""><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/180621/343_0918487112.png','343_0918487112');"><img src="http://newsimg.5054399.com/uploads/soft/180621/343_0918487112.png" alt="部落冲突：皇室战争皇家野猪">皇家野猪</a></li>
+							<li rel="57293" rel_n="大雪球" style="display:none;"  rel52="" rel53="" rel54=""><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/180621/343_0918486221.png','343_0918486221');"><img src="http://newsimg.5054399.com/uploads/soft/180621/343_0918486221.png" alt="部落冲突：皇室战争大雪球">大雪球</a></li>
+							<li rel="57292" rel_n="绿林团伙" style="display:none;"  rel52="" rel53="" rel54=""><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/180509/343_1804168761.png','343_1804168761');"><img src="http://newsimg.5054399.com/uploads/soft/180509/343_1804168761.png" alt="部落冲突：皇室战争绿林团伙">绿林团伙</a></li>
+							<li rel="57293" rel_n="野蛮人滚桶" style="display:none;"  rel52="" rel53="" rel54=""><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/180326/343_1607261551.png','343_1607261551');"><img src="http://newsimg.5054399.com/uploads/soft/180326/343_1607261551.png" alt="部落冲突：皇室战争野蛮人滚桶">野蛮人滚桶</a></li>
+							<li rel="57292" rel_n="神箭游侠" style="display:none;"  rel52="" rel53="" rel54=""><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/180211/343_1058056751.png','343_1058056751');"><img src="http://newsimg.5054399.com/uploads/soft/180211/343_1058056751.png" alt="部落冲突：皇室战争神箭游侠">神箭游侠</a></li>
+							<li rel="57292" rel_n="皇室幽灵" style="display:none;"  rel52="" rel53="" rel54=""><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/171212/343_2010551202.png','343_2010551202');"><img src="http://newsimg.5054399.com/uploads/soft/171212/343_2010551202.png" alt="部落冲突：皇室战争皇室幽灵">皇室幽灵</a></li>
+							<li rel="57292" rel_n="电击车小队" style="display:none;"  rel52="" rel53="" rel54=""><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/171212/343_2010557223.png','343_2010557223');"><img src="http://newsimg.5054399.com/uploads/soft/171212/343_2010557223.png" alt="部落冲突：皇室战争电击车小队">电击车小队</a></li>
+							<li rel="57292" rel_n="猎人" style="display:none;"  rel52="" rel53="" rel54=""><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/171212/343_2010559461.png','343_2010559461');"><img src="http://newsimg.5054399.com/uploads/soft/171212/343_2010559461.png" alt="部落冲突：皇室战争猎人">猎人</a></li>
+							<li rel="57292" rel_n="飞行器" style="display:none;"  rel52="0" rel53="1" rel54="7"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/201706/010P000034305I8-1.png','010P000034305I8-1');"><img src="http://newsimg.5054399.com/uploads/allimg/201706/010P000034305I8-1.png" alt="部落冲突：皇室战争飞行器">飞行器</a></li>
+							<li rel="57292" rel_n="超级骑士" style="display:none;"  rel52="0" rel53="3" rel54="10"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/201706/010P0000343060J-1.png','010P0000343060J-1');"><img src="http://newsimg.5054399.com/uploads/allimg/201706/010P0000343060J-1.png" alt="部落冲突：皇室战争超级骑士">超级骑士</a></li>
+							<li rel="57292" rel_n="骷髅气球" style="display:none;"  rel52="0" rel53="0" rel54="10"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/201706/010P000034302164-1.png','010P000034302164-1');"><img src="http://newsimg.5054399.com/uploads/allimg/201706/010P000034302164-1.png" alt="部落冲突：皇室战争骷髅气球">骷髅气球</a></li>
+							<li rel="57292" rel_n="加农炮战车" style="display:none;"  rel52="0" rel53="2" rel54="9"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/201706/010P00003430Y48-1.png','010P00003430Y48-1');"><img src="http://newsimg.5054399.com/uploads/allimg/201706/010P00003430Y48-1.png" alt="部落冲突：皇室战争加农炮战车">加农炮战车</a></li>
+							<li rel="57292" rel_n="暗夜女巫" style="display:none;"  rel52="0" rel53="3" rel54="8"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/201706/010P000034304563-1.png','010P000034304563-1');"><img src="http://newsimg.5054399.com/uploads/allimg/201706/010P000034304563-1.png" alt="部落冲突：皇室战争暗夜女巫">暗夜女巫</a></li>
+							<li rel="57293" rel_n="治疗法术" style="display:none;"  rel52="1" rel53="1" rel54="10"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/201706/010P000034301534-1.png','010P000034301534-1');"><img src="http://newsimg.5054399.com/uploads/allimg/201706/010P000034301534-1.png" alt="部落冲突：皇室战争治疗法术">治疗法术</a></li>
+							<li rel="57292" rel_n="蝙蝠" style="display:none;"  rel52="0" rel53="0" rel54="8"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/201706/010P0000343041X-1.png','010P0000343041X-1');"><img src="http://newsimg.5054399.com/uploads/allimg/201706/010P0000343041X-1.png" alt="部落冲突：皇室战争蝙蝠">蝙蝠</a></li>
+							<li rel="57292" rel_n="幻影刺客" style="display:none;"  rel52="0" rel53="3" rel54="9"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/201706/010P000034306495-1.png','010P000034306495-1');"><img src="http://newsimg.5054399.com/uploads/allimg/201706/010P000034306495-1.png" alt="部落冲突：皇室战争幻影刺客">幻影刺客</a></li>
+							<li rel="57292" rel_n="哥布林团伙" style="display:none;"  rel52="0" rel53="0" rel54="9"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/201706/010P000034306013-1.png','010P000034306013-1');"><img src="http://newsimg.5054399.com/uploads/allimg/201706/010P000034306013-1.png" alt="部落冲突：皇室战争哥布林团伙">哥布林团伙</a></li>
+							<li rel="57292" rel_n="野蛮人攻城槌" style="display:none;"  rel52="0" rel53="1" rel54="6"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/201706/010P000034303556-1.png','010P000034303556-1');"><img src="http://newsimg.5054399.com/uploads/allimg/201706/010P000034303556-1.png" alt="部落冲突：皇室战争野蛮人攻城槌">野蛮人攻城槌</a></li>
+							<li rel="57292" rel_n="吹箭哥布林" style="display:none;"  rel52="0" rel53="1" rel54="9"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/201706/010P00003430OV-1.png','010P00003430OV-1');"><img src="http://newsimg.5054399.com/uploads/allimg/201706/010P00003430OV-1.png" alt="部落冲突：皇室战争吹箭哥布林">吹箭哥布林</a></li>
+							<li rel="57292" rel_n="飞斧屠夫" style="display:none;"  rel52="0" rel53="2" rel54="9"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/201706/010P000034301255-1.png','010P000034301255-1');"><img src="http://newsimg.5054399.com/uploads/allimg/201706/010P000034301255-1.png" alt="部落冲突：皇室战争飞斧屠夫">飞斧屠夫</a></li>
+							<li rel="57292" rel_n="闪电法师" style="display:none;"  rel52="0" rel53="3" rel54="7"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/201706/010P000034309B1-1.png','010P000034309B1-1');"><img src="http://newsimg.5054399.com/uploads/allimg/201706/010P000034309B1-1.png" alt="部落冲突：皇室战争闪电法师">闪电法师</a></li>
+							<li rel="57293" rel_n="克隆法术" style="display:none;"  rel52="1" rel53="2" rel54="8"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/201706/010P000034303252-1.png','010P000034303252-1');"><img src="http://newsimg.5054399.com/uploads/allimg/201706/010P000034303252-1.png" alt="部落冲突：皇室战争克隆法术">克隆法术</a></li>
+							<li rel="57292" rel_n="野蛮人精锐" style="display:none;"  rel52="0" rel53="0" rel54="7"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/201706/010P000034302450-1.png','010P000034302450-1');"><img src="http://newsimg.5054399.com/uploads/allimg/201706/010P000034302450-1.png" alt="部落冲突：皇室战争野蛮人精锐">野蛮人精锐</a></li>
+							<li rel="57293" rel_n="飓风法术" style="display:none;"  rel52="1" rel53="2" rel54="6"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/201706/010P00003430Q21-1.png','010P00003430Q21-1');"><img src="http://newsimg.5054399.com/uploads/allimg/201706/010P00003430Q21-1.png" alt="部落冲突：皇室战争飓风法术">飓风法术</a></li>
+							<li rel="57293" rel_n="骷髅召唤" style="display:none;"  rel52="0" rel53="3" rel54="5"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/161129/204_1123188991.png','204_1123188991');"><img src="http://newsimg.5054399.com/uploads/soft/161129/204_1123188991.png" alt="部落冲突：皇室战争骷髅召唤">骷髅召唤</a></li>
+							<li rel="57292" rel_n="戈仑冰人" style="display:none;"  rel52="0" rel53="1" rel54="8"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/161014/204_1000481521.png','204_1000481521');"><img src="http://newsimg.5054399.com/uploads/soft/161014/204_1000481521.png" alt="部落冲突：皇室战争戈仑冰人">戈仑冰人</a></li>
+							<li rel="57292" rel_n="地狱飞龙" style="display:none;"  rel52="0" rel53="3" rel54="4"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/161009/204_1451437251.png','204_1451437251');"><img src="http://newsimg.5054399.com/uploads/soft/161009/204_1451437251.png" alt="部落冲突：皇室战争地狱飞龙">地狱飞龙</a></li>
+							<li rel="57292" rel_n="重甲亡灵" style="display:none;"  rel52="0" rel53="1" rel54="7"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/201706/010P000034301120-1.png','010P000034301120-1');"><img src="http://newsimg.5054399.com/uploads/allimg/201706/010P000034301120-1.png" alt="部落冲突：皇室战争重甲亡灵">重甲亡灵</a></li>
+							<li rel="57293" rel_n="复仇滚木" style="display:none;"  rel52="1" rel53="3" rel54="6"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/201706/010P0000343020a-1.png','010P0000343020a-1');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/201706/010P0000343020a-1.png" alt="部落冲突：皇室战争复仇滚木">复仇滚木</a></li>
+							<li rel="57292" rel_n="寒冰精灵" style="display:none;"  rel52="0" rel53="0" rel54="8"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/201706/010P000034303314-1.png','010P000034303314-1');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/201706/010P000034303314-1.png" alt="部落冲突：皇室战争寒冰精灵">寒冰精灵</a></li>
+							<li rel="57292" rel_n="狂暴樵夫" style="display:none;"  rel52="0" rel53="3" rel54="8"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/201706/010P00003430b93-1.png','010P00003430b93-1');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/201706/010P00003430b93-1.png" alt="部落冲突：皇室战争狂暴樵夫">狂暴樵夫</a></li>
+							<li rel="57292" rel_n="巨石投手" style="display:none;"  rel52="0" rel53="2" rel54="8"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/201706/010P0000343061F-1.png','010P0000343061F-1');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/201706/010P0000343061F-1.png" alt="部落冲突：皇室战争巨石投手">巨石投手</a></li>
+							<li rel="57294" rel_n="烈焰熔炉" style="display:none;"  rel52="2" rel53="1" rel54="5"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/201706/010P00003430L96-1.png','010P00003430L96-1');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/201706/010P00003430L96-1.png" alt="部落冲突：皇室战争烈焰熔炉">烈焰熔炉</a></li>
+							<li rel="57292" rel_n="骷髅卫士" style="display:none;"  rel52="0" rel53="2" rel54="7"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/201706/010P000034302W7-1.png','010P000034302W7-1');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/201706/010P000034302W7-1.png" alt="部落冲突：皇室战争骷髅卫士">骷髅卫士</a></li>
+							<li rel="57292" rel_n="烈焰精灵" style="display:none;"  rel52="0" rel53="0" rel54="5"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/201706/010P00003430J62-1.png','010P00003430J62-1');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/201706/010P00003430J62-1.png" alt="部落冲突：皇室战争烈焰精灵">烈焰精灵</a></li>
+							<li rel="57292" rel_n="电磁炮" style="display:none;"  rel52="0" rel53="3" rel54="6"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/201706/010P0000343050T-1.png','010P0000343050T-1');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/201706/010P0000343050T-1.png" alt="部落冲突：皇室战争电磁炮">电磁炮</a></li>
+							<li rel="57292" rel_n="掘地矿工" style="display:none;"  rel52="0" rel53="3" rel54="6"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/201706/010P0000343032Z-1.png','010P0000343032Z-1');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/201706/010P0000343032Z-1.png" alt="部落冲突：皇室战争掘地矿工">掘地矿工</a></li>
+							<li rel="57292" rel_n="熔岩猎犬" style="display:none;"  rel52="0" rel53="3" rel54="4"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/201706/010P000034305525-1.png','010P000034305525-1');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/201706/010P000034305525-1.png" alt="部落冲突：皇室战争熔岩猎犬">熔岩猎犬</a></li>
+							<li rel="53896" rel_n="巨人" style="display:none;"  rel52="0" rel53="1" rel54="0"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/160330/151_1618143374.png','151_1618143374');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/160330/151_1618143374.png" alt="部落冲突：皇室战争巨人">巨人</a></li>
+							<li rel="53896" rel_n="气球兵" style="display:none;"  rel52="0" rel53="2" rel54="2"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/160330/151_1618572951.png','151_1618572951');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/160330/151_1618572951.png" alt="部落冲突：皇室战争气球兵">气球兵</a></li>
+							<li rel="53896" rel_n="皮卡超人" style="display:none;"  rel52="0" rel53="2" rel54="4"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/160330/151_1657486771.png','151_1657486771');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/160330/151_1657486771.png" alt="部落冲突：皇室战争皮卡超人">皮卡超人</a></li>
+							<li rel="53896" rel_n="火枪手" style="display:none;"  rel52="0" rel53="1" rel54="0"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/160426/204_1111002481.png','204_1111002481');"><img lz_src="http://newsimg.5054399.com/uploads/soft/160426/204_1111002481.png" alt="部落冲突：皇室战争火枪手">火枪手</a></li>
+							<li rel="53896" rel_n="女巫" style="display:none;"  rel52="0" rel53="2" rel54="0"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/160330/151_1618391403.png','151_1618391403');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/160330/151_1618391403.png" alt="部落冲突：皇室战争女巫">女巫</a></li>
+							<li rel="53896" rel_n="迷你皮卡" style="display:none;"  rel52="0" rel53="1" rel54="0"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/160330/151_1618395532.png','151_1618395532');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/160330/151_1618395532.png" alt="部落冲突：皇室战争迷你皮卡">迷你皮卡</a></li>
+							<li rel="53896" rel_n="法师" style="display:none;"  rel52="0" rel53="1" rel54="5"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/160330/151_1614449252.png','151_1614449252');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/160330/151_1614449252.png" alt="部落冲突：皇室战争法师">法师</a></li>
+							<li rel="53896" rel_n="飞龙宝宝" style="display:none;"  rel52="0" rel53="2" rel54="0"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/160330/151_1614447423.png','151_1614447423');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/160330/151_1614447423.png" alt="部落冲突：皇室战争飞龙宝宝">飞龙宝宝</a></li>
+							<li rel="53896" rel_n="王子" style="display:none;"  rel52="0" rel53="2" rel54="0"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/160330/151_1618574705.png','151_1618574705');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/160330/151_1618574705.png" alt="部落冲突：皇室战争王子">王子</a></li>
+							<li rel="53896" rel_n="骷髅巨人" style="display:none;"  rel52="0" rel53="2" rel54="2"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/160330/151_1618396611.png','151_1618396611');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/160330/151_1618396611.png" alt="部落冲突：皇室战争骷髅巨人">骷髅巨人</a></li>
+							<li rel="53896" rel_n="野猪骑士" style="display:none;"  rel52="0" rel53="1" rel54="4"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/160330/151_1619105602.png','151_1619105602');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/160330/151_1619105602.png" alt="部落冲突：皇室战争野猪骑士">野猪骑士</a></li>
+							<li rel="53897" rel_n="毒药法术" style="display:none;"  rel52="1" rel53="2" rel54="5"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/201706/010P000034303404-1.png','010P000034303404-1');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/201706/010P000034303404-1.png" alt="部落冲突：皇室战争毒药法术">毒药法术</a></li>
+							<li rel="53896" rel_n="公主" style="display:none;"  rel52="0" rel53="3" rel54="7"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/160330/151_1152257321.png','151_1152257321');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/160330/151_1152257321.png" alt="部落冲突：皇室战争公主">公主</a></li>
+							<li rel="53896" rel_n="寒冰法师" style="display:none;"  rel52="0" rel53="3" rel54="5"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/160330/151_1139526151.png','151_1139526151');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/160330/151_1139526151.png" alt="部落冲突：皇室战争寒冰法师">寒冰法师</a></li>
+							<li rel="53896" rel_n="三个火枪手 " style="display:none;"  rel52="0" rel53="1" rel54="7"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/160407/151_1439047671.png','151_1439047671');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/160407/151_1439047671.png" alt="部落冲突：皇室战争三个火枪手 ">三个火枪手 </a></li>
+							<li rel="53896" rel_n="黑暗王子" style="display:none;"  rel52="0" rel53="2" rel54="7"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/160330/151_1627386152.png','151_1627386152');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/160330/151_1627386152.png" alt="部落冲突：皇室战争黑暗王子">黑暗王子</a></li>
+							<li rel="53896" rel_n="皇家巨人" style="display:none;"  rel52="0" rel53="0" rel54="7"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/160330/151_1618144422.png','151_1618144422');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/160330/151_1618144422.png" alt="部落冲突：皇室战争皇家巨人">皇家巨人</a></li>
+							<li rel="53896" rel_n="骷髅军团" style="display:none;"  rel52="0" rel53="2" rel54="0"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/201705/010P000034302Q6-1.png','010P000034302Q6-1');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/201705/010P000034302Q6-1.png" alt="部落冲突：皇室战争骷髅军团">骷髅军团</a></li>
+							<li rel="57293" rel_n="冰冻法术" style="display:none;"  rel52="1" rel53="2" rel54="4"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/160330/218_1619359761.png','218_1619359761');"><img lz_src="http://newsimg.5054399.com/uploads/soft/160330/218_1619359761.png" alt="部落冲突：皇室战争冰冻法术">冰冻法术</a></li>
+							<li rel="57294" rel_n="地狱塔" style="display:none;"  rel52="2" rel53="1" rel54="4"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/160330/218_1626299624.png','218_1626299624');"><img lz_src="http://newsimg.5054399.com/uploads/soft/160330/218_1626299624.png" alt="部落冲突：皇室战争地狱塔">地狱塔</a></li>
+							<li rel="53898" rel_n="电塔" style="display:none;"  rel52="2" rel53="0" rel54="4"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/160330/218_1626298363.png','218_1626298363');"><img lz_src="http://newsimg.5054399.com/uploads/soft/160330/218_1626298363.png" alt="部落冲突：皇室战争电塔">电塔</a></li>
+							<li rel="53898" rel_n="迫击炮" style="display:none;"  rel52="2" rel53="0" rel54="6"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/160426/204_1113082471.png','204_1113082471');"><img lz_src="http://newsimg.5054399.com/uploads/soft/160426/204_1113082471.png" alt="部落冲突：皇室战争迫击炮">迫击炮</a></li>
+							<li rel="53898" rel_n="加农炮" style="display:none;"  rel52="2" rel53="0" rel54="3"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/160330/218_1626294601.png','218_1626294601');"><img lz_src="http://newsimg.5054399.com/uploads/soft/160330/218_1626294601.png" alt="部落冲突：皇室战争加农炮">加农炮</a></li>
+							<li rel="53898" rel_n="炸弹人塔" style="display:none;"  rel52="2" rel53="1" rel54="2"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/160330/218_1625264543.png','218_1625264543');"><img lz_src="http://newsimg.5054399.com/uploads/soft/160330/218_1625264543.png" alt="部落冲突：皇室战争炸弹人塔">炸弹人塔</a></li>
+							<li rel="53898" rel_n="墓碑" style="display:none;"  rel52="2" rel53="1" rel54="2"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/160330/218_1625264672.png','218_1625264672');"><img lz_src="http://newsimg.5054399.com/uploads/soft/160330/218_1625264672.png" alt="部落冲突：皇室战争墓碑">墓碑</a></li>
+							<li rel="53898" rel_n="哥布林兵营" style="display:none;"  rel52="2" rel53="1" rel54="1"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/160330/218_1625261231.png','218_1625261231');"><img lz_src="http://newsimg.5054399.com/uploads/soft/160330/218_1625261231.png" alt="部落冲突：皇室战争哥布林兵营">哥布林兵营</a></li>
+							<li rel="53898" rel_n="野蛮人兵营" style="display:none;"  rel52="2" rel53="1" rel54="3"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/160330/218_1624349273.png','218_1624349273');"><img lz_src="http://newsimg.5054399.com/uploads/soft/160330/218_1624349273.png" alt="部落冲突：皇室战争野蛮人兵营">野蛮人兵营</a></li>
+							<li rel="53898" rel_n="圣水采集器" style="display:none;"  rel52="2" rel53="1" rel54="6"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/160330/218_1624342112.png','218_1624342112');"><img lz_src="http://newsimg.5054399.com/uploads/soft/160330/218_1624342112.png" alt="部落冲突：皇室战争圣水采集器">圣水采集器</a></li>
+							<li rel="53898" rel_n="X弩" style="display:none;"  rel52="2" rel53="2" rel54="3"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/160330/218_1624343521.png','218_1624343521');"><img lz_src="http://newsimg.5054399.com/uploads/soft/160330/218_1624343521.png" alt="部落冲突：皇室战争X弩">X弩</a></li>
+							<li rel="53897" rel_n="电击法术" style="display:none;"  rel52="1" rel53="0" rel54="5"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/160330/218_1619354402.png','218_1619354402');"><img lz_src="http://newsimg.5054399.com/uploads/soft/160330/218_1619354402.png" alt="部落冲突：皇室战争电击法术">电击法术</a></li>
+							<li rel="53897" rel_n="镜像法术" style="display:none;"  rel52="1" rel53="2" rel54="5"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/160330/218_1618419142.png','218_1618419142');"><img lz_src="http://newsimg.5054399.com/uploads/soft/160330/218_1618419142.png" alt="部落冲突：皇室战争镜像法术">镜像法术</a></li>
+							<li rel="53897" rel_n="哥布林飞桶" style="display:none;"  rel52="1" rel53="2" rel54="1"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/201705/010P00003430ND-1.png','010P00003430ND-1');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/201705/010P00003430ND-1.png" alt="部落冲突：皇室战争哥布林飞桶">哥布林飞桶</a></li>
+							<li rel="53897" rel_n="狂暴药水" style="display:none;"  rel52="1" rel53="2" rel54="3"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/160330/218_1616212581.png','218_1616212581');"><img lz_src="http://newsimg.5054399.com/uploads/soft/160330/218_1616212581.png" alt="部落冲突：皇室战争狂暴药水">狂暴药水</a></li>
+							<li rel="53897" rel_n="万箭齐发" style="display:none;"  rel52="1" rel53="0" rel54="0"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/160330/218_1615558521.png','218_1615558521');"><img lz_src="http://newsimg.5054399.com/uploads/soft/160330/218_1615558521.png" alt="部落冲突：皇室战争万箭齐发">万箭齐发</a></li>
+							<li rel="53897" rel_n="火箭" style="display:none;"  rel52="1" rel53="1" rel54="3"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/160330/218_1615192381.png','218_1615192381');"><img lz_src="http://newsimg.5054399.com/uploads/soft/160330/218_1615192381.png" alt="部落冲突：皇室战争火箭">火箭</a></li>
+							<li rel="53897" rel_n="火球" style="display:none;"  rel52="1" rel53="1" rel54="0"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/201706/010P00003430M19-1.png','010P00003430M19-1');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/201706/010P00003430M19-1.png" alt="部落冲突：皇室战争火球">火球</a></li>
+							<li rel="53897" rel_n="雷电法术" style="display:none;"  rel52="1" rel53="2" rel54="1"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/soft/160330/218_1613513981.png','218_1613513981');"><img lz_src="http://newsimg.5054399.com/uploads/soft/160330/218_1613513981.png" alt="部落冲突：皇室战争雷电法术">雷电法术</a></li>
+							<li rel="53896" rel_n="小亡灵" style="display:none;"  rel52="0" rel53="0" rel54="2"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/160330/151_1618577663.png','151_1618577663');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/160330/151_1618577663.png" alt="部落冲突：皇室战争小亡灵">小亡灵</a></li>
+							<li rel="53896" rel_n="女武神" style="display:none;"  rel52="0" rel53="1" rel54="1"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/160330/151_1618394904.png','151_1618394904');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/160330/151_1618394904.png" alt="部落冲突：皇室战争女武神">女武神</a></li>
+							<li rel="53896" rel_n="小骷髅" style="display:none;"  rel52="0" rel53="0" rel54="2"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/160330/151_1618146825.png','151_1618146825');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/160330/151_1618146825.png" alt="部落冲突：皇室战争小骷髅">小骷髅</a></li>
+							<li rel="53896" rel_n="哥布林" style="display:none;"  rel52="0" rel53="0" rel54="1"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/160330/151_1614447084.png','151_1614447084');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/160330/151_1614447084.png" alt="部落冲突：皇室战争哥布林">哥布林</a></li>
+							<li rel="53896" rel_n="哥布林投矛手" style="display:none;"  rel52="0" rel53="0" rel54="1"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/160330/151_1614442915.png','151_1614442915');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/160330/151_1614442915.png" alt="部落冲突：皇室战争哥布林投矛手">哥布林投矛手</a></li>
+							<li rel="53896" rel_n="亡灵大军" style="display:none;"  rel52="0" rel53="0" rel54="4"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/160330/151_1618571394.png','151_1618571394');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/160330/151_1618571394.png" alt="部落冲突：皇室战争亡灵大军">亡灵大军</a></li>
+							<li rel="53896" rel_n="野蛮人" style="display:none;"  rel52="0" rel53="0" rel54="3"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/160330/151_1619108691.png','151_1619108691');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/160330/151_1619108691.png" alt="部落冲突：皇室战争野蛮人">野蛮人</a></li>
+							<li rel="53896" rel_n="石头人" style="display:none;"  rel52="0" rel53="2" rel54="6"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/160330/151_1618579032.png','151_1618579032');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/160330/151_1618579032.png" alt="部落冲突：皇室战争石头人">石头人</a></li>
+							<li rel="53896" rel_n="弓箭手" style="display:none;"  rel52="0" rel53="0" rel54="0"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/160330/151_1618141521.png','151_1618141521');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/160330/151_1618141521.png" alt="部落冲突：皇室战争弓箭手">弓箭手</a></li>
+							<li rel="53896" rel_n="投弹兵" style="display:none;"  rel52="0" rel53="0" rel54="0"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/160330/151_1619103473.png','151_1619103473');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/160330/151_1619103473.png" alt="部落冲突：皇室战争投弹兵">投弹兵</a></li>
+							<li rel="53896" rel_n="骑士" style="display:none;"  rel52="0" rel53="0" rel54="0"><a href="javascript:appendDiv('http://newsimg.5054399.com/uploads/allimg/160330/151_1618398105.png','151_1618398105');"><img lz_src="http://newsimg.5054399.com/uploads/allimg/160330/151_1618398105.png" alt="部落冲突：皇室战争骑士">骑士</a></li>
+				         </ul>
+	         <div class="gk_more" id="daquan_link"><a href="#">加载更多</a></div>
+	    </div>
+    </div>
+    	<div class="main3">
+	</div>
+	
+	
+
+	<div class="phone_footer">
+    <div class="phone_wrapper">
+<style type="text/css">
+.phone_product .ico_yh{ background:url(http://newsimg.5054399.com/css/shouyou/images/phone_universal_e2.png) no-repeat 0 -420px;width:16px; height:16px; float:left;}
+.phone_product dd{ color:#333; float:left;height:16px; font-size:12px; margin:2px 0 0 0;background:url(http://newsimg.5054399.com/css/shouyou/images/phone_universal_e2.png) no-repeat right -231px;padding:0 8px;font-family:"simsun";line-height:16px;}
+.phone_product dd i{ margin:0 5px 0 0; _margin:0 2px 0 0;}
+</style>
+       
+        <script type="text/javascript" src="http://newsimg.5054399.com/js/news_shouji_footer_v2.js" charset="gbk"></script>
+    </div>
+</div>	<script>
+		$("#j-site-menu").mouseenter(function(){
+	    	$(this).addClass("phone_menu_cur");
+	    	$("#j-phone-sitemap").show();
+	    }).mouseleave(function(){
+	    	$(this).removeClass("phone_menu_cur");
+	    	$("#j-phone-sitemap").hide();
+	    });
+		func_init.default_num = 36;
+		func_init.search().daquan().share('#4399手机游戏网#4399皇室战争卡牌大全，为您提供皇室战争卡牌搭配、皇室战争卡牌介绍、卡牌升级数据。更多皇室战争攻略，尽在4399手机游戏网。', 'http://newsimg.5054399.com/uploads/soft/150310/105_1710134091.png').selfil();
+
+		//导航
+	    $(function(){
+	        $(".nav li").hover(function(){$(this).find(".nav2").show();},function(){$(this).find(".nav2").hide();});
+	    });
+	    $.tuc_scroll();
+
+	     $('.li2').hover(function(){
+	    	$('.fx_cn').show();
+	    }, function(){
+	    	$('.fx_cn').hide();
+	    });
+
+		 if($(window).width()>1024){
+			$(".fixnav").show();
+		}
+	</script>
+    <script type="text/javascript" src="/js/rice/m.js"></script>
+    <script>Rice.create({id:2,top:240,bodyWidth:1000});Rice.create({id:4});</script>
+	<script type="text/javascript" src="http://news.4399.com/js/mtj.js"></script>
+</body>
+</html>
